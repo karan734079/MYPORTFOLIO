@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import About from './pages/About';
@@ -12,23 +12,23 @@ import Weather from './pages/Weather';
 import Rps from './pages/Rps';
 import GetStarted from './pages/GetStarted';
 import Home from './pages/Home';
-import { Provider } from 'react-redux';
-import { appStore } from './store/appStore';
 import NetflixGpt from './components/NetflixGpt';
 import MyYoutube from './components/MyYoutube';
-
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { appStore } from './store/appStore';
 
 function App() {
-
   return (
     <>
       <Header />
       <Routes>
+        <Route path="/" element={<GetStarted />} />
         <Route path="/my-projects" element={<Home />} />
-        <Route path="/get-started" element={<GetStarted />} />
+        <Route path="/" element={<GetStarted />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/todoList" element={<TodoList />} />
+        <Route path="/todolist" element={<TodoList />} />
         <Route path="/calculator" element={<Calculator />} />
         <Route path="/counterRedux" element={<CounterRedux />} />
         <Route path="/calculatorRedux" element={<CalculatorRedux />} />
