@@ -14,7 +14,7 @@ const TodoListRedux = () => {
         </div>
         <div className="flex flex-wrap gap-y-3">
           {todos.map((todo) => (
-            <div key={todo.id} className="w-full">
+            <div key={todo.id} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
               <TodoItemRedux todo={todo} />
             </div>
           ))}

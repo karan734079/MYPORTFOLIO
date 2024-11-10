@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState } from "react";
 
 const Rps = () => {
     const [playerChoice, setPlayerChoice] = useState(null);
@@ -28,25 +28,17 @@ const Rps = () => {
         ) {
             setPlayerScore(playerScore + 1);
             if (playerScore === 5) {
-                setResult("player winner")
-                setPlayerChoice(null);
-                setComputerChoice(null);
-                setPlayerScore(0)
-                setComputerScore(0);
+                setResult("Player wins!");
+                resetGame();
             }
         } else {
             setComputerScore(computerScore + 1);
             if (computerScore === 5) {
-                setResult("computer winner")
-                setPlayerChoice(null);
-                setComputerChoice(null);
-                setComputerScore(0);
-                setPlayerScore(0);
+                setResult("Computer wins!");
+                resetGame();
             }
         }
     };
-
-
 
     const resetGame = () => {
         setPlayerChoice(null);
@@ -57,9 +49,9 @@ const Rps = () => {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-teal-500 to-blue-500">
-            <div className="text-center p-8 bg-white rounded-lg shadow-lg w-96">
-                <h1 className="text-3xl font-bold text-gray-800 mb-6">Rock Paper Scissor</h1>
+        <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-teal-500 to-blue-500 p-4">
+            <div className="text-center p-8 bg-white rounded-lg shadow-lg w-full sm:w-96 md:w-1/2 lg:w-1/3">
+                <h1 className="text-3xl font-bold text-gray-800 mb-6">Rock Paper Scissors</h1>
 
                 <div className="mb-4">
                     <p className="text-xl text-gray-700">Your Score: {playerScore}</p>
@@ -67,20 +59,20 @@ const Rps = () => {
                 </div>
 
                 <div className="mb-4">
-                    <p className="text-xl text-gray-700">Your choice:{playerChoice ? playerChoice : " None"} </p>
-                    <p className="text-xl text-gray-700">Computer&apos;s choice: {computerChoice ? computerChoice : " None"}</p>
+                    <p className="text-xl text-gray-700">Your choice: {playerChoice ? playerChoice : "None"}</p>
+                    <p className="text-xl text-gray-700">Computer&apos;s choice: {computerChoice ? computerChoice : "None"}</p>
                 </div>
 
                 <div className="mb-4">
-                    <h2 className="text-2xl font-semibold text-gray-800">Result : {result ? result : "None"}</h2>
+                    <h2 className="text-2xl font-semibold text-gray-800">Result: {result ? result : "None"}</h2>
                 </div>
 
-                <div className="flex justify-center space-x-4">
+                <div className="flex justify-center space-x-4 mb-4">
                     {choices.map((choice) => (
                         <button
                             key={choice}
                             onClick={() => handlePlayerChoice(choice)}
-                            className="w-24 h-24 bg-blue-500 text-white rounded-full flex items-center justify-center text-lg font-semibold hover:bg-blue-600 transition"
+                            className="w-24 h-24 sm:w-32 sm:h-32 bg-blue-500 text-white rounded-full flex items-center justify-center text-lg font-semibold hover:bg-blue-600 transition"
                         >
                             {choice.charAt(0).toUpperCase() + choice.slice(1)}
                         </button>
@@ -97,7 +89,7 @@ const Rps = () => {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default Rps
+export default Rps;

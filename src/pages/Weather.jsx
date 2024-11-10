@@ -45,10 +45,10 @@ const Weather = () => {
     };
 
     return (
-        <div className="bg-gradient-to-r from-teal-500 to-blue-500 min-h-screen flex flex-col py-14">
-            <div className="search w-[96%] mx-auto">
+        <div className="bg-gradient-to-r from-teal-500 to-blue-500 min-h-screen flex flex-col py-14 px-4 sm:px-6 md:px-8 lg:px-12">
+            <div className="search w-full mx-auto">
                 <input
-                    className="w-[90%] p-3 mt-10 rounded-3xl city outline-none border-none focus:ring-0"
+                    className="w-full sm:w-4/5 md:w-3/4 lg:w-2/3 p-3 mt-10 rounded-3xl city outline-none border-none focus:ring-0"
                     type="text"
                     placeholder="Enter City Name"
                     spellCheck="false"
@@ -63,11 +63,11 @@ const Weather = () => {
                 </button>
             </div>
 
-            <div className="flex flex-col justify-evenly items-center">
-                <img className="main-img mr-12x" src={imgSource} alt="weather condition" />
+            <div className="flex flex-col justify-center items-center mt-10">
+                <img className="main-img w-32 sm:w-40 md:w-52 lg:w-64" src={imgSource} alt="weather condition" />
             </div>
 
-            <div className="flex justify-around mt-5">
+            <div className="flex flex-col sm:flex-row justify-evenly mt-5">
                 <div className="text-white text-center flex p-5">
                     <img className="w-10" src={humidity} alt="humidity" />
                     <div className="mx-5">
@@ -75,7 +75,7 @@ const Weather = () => {
                         <h3 className="text-xl font-bold text-white">Humidity</h3>
                     </div>
                 </div>
-                <div>
+                <div className="text-center sm:text-left">
                     <h2 className="text-3xl font-bold text-white temp">{temperature}&deg;C</h2>
                     <h2 className="text-3xl font-bold text-white city-name">Temperature</h2>
                 </div>
@@ -89,12 +89,12 @@ const Weather = () => {
             </div>
 
             {/* Recent History Section */}
-            <div className="history-section bg-white p-5 mt-1 mx-auto rounded-lg w-[96%]  max-h-60 overflow-y-auto scrollbar-hidden">
+            <div className="history-section bg-white p-5 mt-5 mx-auto rounded-lg w-full sm:w-4/5 md:w-3/4 lg:w-2/3 max-h-60 overflow-y-auto scrollbar-hidden">
                 <div className='flex justify-between'>
-                <h2 className="text-2xl font-bold text-black mb-2">Recent Searches</h2>
-                <button onClick={() => dispatch(clearHistory())} className="bg-red-500 text-white font-bold py-1 px-2 mb-2 rounded hover:bg-red-600">
-                    Clear
-                </button>
+                    <h2 className="text-2xl font-bold text-black mb-2">Recent Searches</h2>
+                    <button onClick={() => dispatch(clearHistory())} className="bg-red-500 text-white font-bold py-1 px-2 mb-2 rounded hover:bg-red-600">
+                        Clear
+                    </button>
                 </div>
                 <ul className="space-y-3">
                     <li className="flex justify-between p-2 bg-white rounded-lg shadow">

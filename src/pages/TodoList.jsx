@@ -38,9 +38,6 @@ const TodoList = () => {
     localStorage.setItem("todos", JSON.stringify(todos))
   }, [todos])
 
-
-
-
   return (
     <TodoProvider value={{ todos, addTodo, updateTodo, deleteTodo, toggleComplete }}>
       <div className="bg-gradient-to-r from-teal-500 to-blue-500 min-h-screen py-8 pt-28">
@@ -51,9 +48,7 @@ const TodoList = () => {
           </div>
           <div className="flex flex-wrap gap-y-3">
             {todos.map((todo) => (
-              <div key={todo.id}
-                className='w-full'
-              >
+              <div key={todo.id} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
                 <TodoItem todo={todo} />
               </div>
             ))}
@@ -65,4 +60,3 @@ const TodoList = () => {
 }
 
 export default TodoList;
-
