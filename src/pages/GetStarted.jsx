@@ -31,7 +31,7 @@ const GetStarted = () => {
               Karan Kumar
             </h1>
             <p className="text-md sm:text-lg font-semibold mb-1">Frontend Developer | MCA Graduate</p>
-            <p className="text-sm sm:text-base opacity-80">+91-7340795241 | Punjab, India</p>
+            <p className="text-sm sm:text-base opacity-80 text-center pr-6">+91-7340795241 | Punjab, India</p>
             <p className="text-sm sm:text-base mb-4 opacity-80">
               karanjangral60@gmail.com |{' '}
               <Link to="https://www.linkedin.com/in/karan2001/" className="text-black">
