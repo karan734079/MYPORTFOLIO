@@ -18,7 +18,7 @@ const GetStarted = () => {
     <div className="min-h-screen bg-white text-black flex flex-col items-center justify-center px-4 py-3 sm:px-6 sm:py-10 md:px-8 md:py-12 lg:py-16 overflow-auto">
       {/* Header Section */}
       <div className="text-center mb-6 max-w-4xl cursor-pointer animate-fade-in">
-        <div className="flex flex-col sm:flex-row justify-center items-center sm:space-x-8 space-y-4 sm:space-y-0">
+        <div className="flex flex-col sm:flex-row justify-center items-center sm:space-x-8 space-y-4 sm:space-y-0 ml-12">
           <div>
             <img
               src={profileImg}
