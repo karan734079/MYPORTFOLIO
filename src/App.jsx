@@ -17,6 +17,8 @@ import MyYoutube from './components/MyYoutube';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { appStore } from './store/appStore';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 
 function App() {
   return (
@@ -37,6 +39,8 @@ function App() {
         <Route path="/rps" element={<Rps />} />
         <Route path="/netflixGpt" element={<NetflixGpt />} />
         <Route path="/my-youtube" element={<MyYoutube />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="//terms-of-services" element={<TermsOfService />} />
       </Routes>
       <Footer />
     </>

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="bg-white text-gray-800 p-6 shadow-lg">
@@ -7,9 +9,9 @@ const Footer = () => {
   
         {/* Navigation Links */}
         <nav className="flex space-x-4 mb-4 sm:mb-0">
-          <p className="hover:text-gray-600 transition cursor-pointer">Privacy Policy</p>
-          <p className="hover:text-gray-600 transition cursor-pointer">Terms of Service</p>
-          <a href="/contact" className="hover:text-gray-600 transition cursor-pointer">Contact Us</a>
+          <Link to='/privacy-policy' className="hover:text-gray-600 transition cursor-pointer">Privacy Policy</Link >
+          <Link to='/terms-of-services' className="hover:text-gray-600 transition cursor-pointer">Terms of Service</Link >
+          <Link to="/contact" className="hover:text-gray-600 transition cursor-pointer">Contact Us</Link>
         </nav>
   
         {/* Action Buttons */}
