@@ -27,12 +27,12 @@ const GetStarted = () => {
             />
           </div>
           <div className="text-center sm:text-left">
-            <h1 className="text-3xl sm:text-5xl font-extrabold mb-1 tracking-tight transition-all duration-300 hover:text-slate-800">
+            <h1 className="text-3xl sm:text-5xl text-center font-extrabold mb-1 tracking-tight transition-all duration-300 hover:text-slate-800">
               Karan Kumar
             </h1>
-            <p className="text-md sm:text-lg font-semibold mb-1">Frontend Developer | MCA Graduate</p>
-            <p className="text-sm sm:text-base opacity-80 text-center pr-6">+91-7340795241 | Punjab, India</p>
-            <p className="text-sm sm:text-base mb-4 opacity-80">
+            <p className="text-md sm:text-lg font-semibold mb-1 text-center">Frontend Developer | MCA Graduate</p>
+            <p className="text-sm sm:text-base opacity-80 text-center">+91-7340795241 | Punjab, India</p>
+            <p className="text-sm sm:text-base mb-4 opacity-80 text-center">
               karanjangral60@gmail.com |{' '}
               <Link to="https://www.linkedin.com/in/karan2001/" className="text-black">
                 LinkedIn

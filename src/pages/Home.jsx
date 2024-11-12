@@ -61,7 +61,7 @@ const Home = () => {
     <div className="flex flex-col items-center min-h-screen py-14 justify-center bg-white text-black">
       <header className="mb-8">
         <h1 className="text-5xl font-bold">My Projects</h1>
-        <p className="text-lg mt-2">Showcasing my work in React</p>
+        <p className="text-lg mt-2 text-center">Showcasing my work in React</p>
       </header>
 
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
