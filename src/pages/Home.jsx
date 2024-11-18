@@ -44,6 +44,16 @@ const Home = () => {
           path: '/rps',
         },
         {
+          title: 'Quiz App',
+          description: 'Simple and intuitive Quiz App built with React for entertainment.',
+          path: '/quiz-app',
+        },
+        {
+          title: 'Tic-Tac-Toe Game',
+          description: 'Simple and intuitive Quiz App built with React for entertainment.',
+          path: '/tic-tac-toe',
+        },
+        {
           title: 'NetflixGpt',
           description: 'Developed a Netflix-style app with ReactJS, Firebase, Redux, Gemini API, and responsive UI.',
           path: '/netflixGpt'

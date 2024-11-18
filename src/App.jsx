@@ -19,6 +19,8 @@ import { Provider } from 'react-redux';
 import { appStore } from './store/appStore';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
+import QuizApp from './pages/QuizApp';
+import Board from './pages/Board';
 
 function App() {
   return (
@@ -40,7 +42,9 @@ function App() {
         <Route path="/netflixGpt" element={<NetflixGpt />} />
         <Route path="/my-youtube" element={<MyYoutube />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="//terms-of-services" element={<TermsOfService />} />
+        <Route path="/terms-of-services" element={<TermsOfService />} />
+        <Route path="/quiz-app" element={<QuizApp />} />
+        <Route path="/tic-tac-toe" element={<Board />} />
       </Routes>
       <Footer />
     </>
